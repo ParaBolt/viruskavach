@@ -1,0 +1,165 @@
+*,
+*::before,
+*::after
+{
+	box-sizing : inherit;
+}
+
+html
+{
+	box-sizing : border-box;
+}
+
+:root
+{
+	--textColor          : #333;
+	--fontFamily         : 'Sora', sans-serif;
+	--maxWidth           : 1200px;
+}
+
+body
+{
+	color       : var(--textColor);
+	font-family : var(--fontFamily);
+	font-size   : calc(1em + .35vmin);
+	margin      : auto;
+}
+
+a
+{
+	text-decoration : none;
+}
+
+button
+{
+	color         : navy;
+	border        : 1px solid;
+	border-radius : 3px;
+	cursor        : pointer;
+	padding       : .5em;
+	font-size     : 1em;
+	font-family   : var(--fontFamily);
+	background    : transparent;
+}
+
+header
+{
+	display         : flex;
+	align-items     : center;
+	justify-content : space-between;
+	padding         : 1em;
+	border-bottom   : 1px solid #CCC;
+}
+
+header .menu-wrapper a
+{
+	color           : navy;
+	text-decoration : none;
+	padding         : 1rem;
+}
+
+header .menu-wrapper a:hover
+{
+	text-decoration : underline;
+}
+
+header img
+{
+	max-width : 15em;
+	width     : 100%;
+}
+
+#menu-toggle
+{
+	display : none;
+}
+
+@media(max-width : 800px)
+{
+	#menu-toggle
+	{
+		display : block;
+	}
+
+	#menu
+	{
+		position   : fixed;
+		width      : 100%;
+		height     : 100vh;
+		z-index    : -1;
+		top        : 0;
+		right      : 0;
+		background : rgb(255 255 255 / 50%);
+		transition : z-index .2s step-end;
+	}
+
+	.menu-wrapper
+	{
+		margin-left    : auto;
+		display        : flex;
+		flex-direction : column;
+		width          : 60%;
+		height         : 100%;
+		background     : rgb(255 2555 255);
+		transform      : translateX(100%);
+		transition     : transform .2s ease-in-out;
+	}
+
+	#menu a
+	{
+		border-bottom : 1px solid;
+	}
+
+	.expanded #menu
+	{
+		z-index : 1;
+		transition : z-index .2s step-start;
+	}
+
+	.expanded .menu-wrapper
+	{
+		box-shadow : 0 0 10px #333;
+		transform  : none;
+	}
+}
+
+footer .links
+{
+	display         : flex;
+	justify-content : center;
+}
+
+footer .links a
+{
+	display         : inline-flex;
+	align-items     : center;
+	justify-content : center;
+	padding         : .5em;
+	margin          : 0 .5em;
+	background      : #EEE;
+	border-radius   : 50%;
+}
+
+footer svg
+{
+	width  : 1.5em;
+	height : 1.5em;
+	fill   : #333;
+}
+
+footer
+{
+	text-align : center;
+	padding    : 1em;
+	border-top : 1px solid #CCC;
+}
+
+footer > * + *
+{
+	margin-top : 1em;
+}
+
+footer nav a
+{
+	margin : 0 1em;
+}

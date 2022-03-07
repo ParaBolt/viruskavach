@@ -1,0 +1,3 @@
+User-agent: *
+allow: https://www.viruskavach.com/sitemap.xml
+

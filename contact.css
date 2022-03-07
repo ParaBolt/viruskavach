@@ -1,0 +1,53 @@
+.container
+{
+	max-width : 800px;
+	margin    : 3em auto;
+	display   : grid;
+	padding   : 1em;
+	gap       : 1.5em;
+}
+
+.container div
+{
+	text-align : center;
+}
+
+input, select, textarea
+{
+	border      : 1px solid #CCC;
+	padding     : .5em;
+	font-size   : 1em;
+	font-family : var(--fontFamily);
+}
+
+textarea
+{
+	resize : vertical;
+}
+
+h2
+{
+	text-align : center;
+	color      : navy;
+	margin     : 0;
+}
+
+.message
+{
+	padding : 1em;
+}
+
+.message:empty
+{
+	display : none;
+}
+
+.message.success
+{
+	background : HSL(120, 50%, 90%);
+}
+
+.message.error
+{
+	background : HSL(0, 50%, 90%);
+}

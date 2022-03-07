@@ -1,0 +1,72 @@
+.container
+{
+	max-width : var(--maxWidth);
+	padding   : 1em;
+	margin    : auto;
+}
+
+.grid
+{
+	display               : grid;
+	grid-template-columns : 1fr 1fr;
+	gap                   : 1em;
+}
+
+.section, p
+{
+	text-align : center;
+}
+
+p + .section
+{
+	margin-top : 2em;
+}
+
+.section + .section
+{
+	margin-top : 5em;
+}
+
+iframe
+{
+	max-width : 100%;
+}
+
+img
+{
+	max-width  : 100%;
+	height     : auto;
+	object-fit : contain;
+}
+
+.mhtimes-img
+{
+	max-height : 450px;
+}
+
+h2
+{
+	font-size      : 1.25em;
+	text-transform : uppercase;
+	color          : #393185;
+	margin-bottom  : 1.5em;
+}
+
+h2::after
+{
+	content    : '';
+	display    : block;
+	margin     : auto;
+	width      : 100px;
+	height     : 3px;
+	background : #00A0E3;
+	margin-top : .5em;
+}
+
+@media(max-width : 800px)
+{
+	.grid
+	{
+		grid-template-columns : 1fr;
+	}
+}

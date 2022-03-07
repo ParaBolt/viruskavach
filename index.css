@@ -1,0 +1,151 @@
+h1
+{
+	font-size : 1.5em;
+}
+
+h2
+{
+	font-size      : 1.25em;
+	text-transform : uppercase;
+	color          : #393185;
+	margin-bottom  : 1.5em;
+}
+
+h2::after
+{
+	content    : '';
+	display    : block;
+	margin     : auto;
+	width      : 100px;
+	height     : 3px;
+	background : #00A0E3;
+	margin-top : .5em;
+}
+
+/* SECTION */
+
+.section
+{
+	text-align : center;
+}
+
+.img
+{
+	width      : 100%;
+	height     : 100%;
+	object-fit : contain;
+}
+
+.section img
+{
+	max-width : 100%;
+	height    : auto;
+}
+
+.section:not(.hero-section)
+{
+	padding : 1.5em 1em 2.5em 1em;
+}
+
+.container
+{
+	max-width : var(--maxWidth);
+	margin    : auto;
+}
+
+.grid
+{
+	display               : grid;
+	grid-template-columns : repeat(auto-fit, minmax(15em, 1fr));
+	grid-gap              : 2em;
+}
+
+.grid img
+{
+	height        : 6em;
+	object-fit    : contain;
+	margin-bottom : .75em;
+}
+
+.circot-img
+{
+	width  : 15em;
+	height : auto;
+}
+
+/* COMPARISON */
+
+table
+{
+	margin          : auto;
+	text-align      : initial;
+	border-collapse : collapse;
+	border-spacing  : 0;
+	font-size       : .8em;
+	text-align      : center;
+}
+
+table td,
+table th
+{
+	border  : 1px solid #CCC;
+	padding : .5em;
+}
+
+thead th
+{
+	width : 25%;
+}
+
+#main-section
+{
+	display               : grid;
+	grid-template-columns : repeat(auto-fit, minmax(320px, 1fr));
+	grid-gap              : 2em;
+	place-items           : center;
+}
+
+.hero-section
+{
+	display         : flex;
+	justify-content : center;
+	background      : linear-gradient(to right,#005A99 50%, #006CAD 51%);
+}
+
+/* CERTIFICATES */
+
+.certificates
+{
+	display         : inline-flex;
+	align-items     : center;
+	justify-content : center;
+	flex-wrap       : wrap;
+}
+
+.certificates img
+{
+	max-height : 150px;
+	margin     : .5em;
+}
+
+.certificates img:nth-child(2)
+{
+	page-break-after : always;
+}
+
+/* TECHNOLOGY SECTION */
+
+.technology-section img + img
+{
+	margin-left : 1em;
+}
+
+.testing-section .img
+{
+	max-height : 200px;
+}
+
+.technology-section .microscope-img
+{
+	max-height : unset;
+}

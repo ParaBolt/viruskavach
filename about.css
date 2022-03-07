@@ -1,0 +1,60 @@
+h1
+{
+	color : #393185;
+}
+
+h2
+{
+	margin-top : 2em;
+	font-size  : 1.15em;
+	color      : #1155CC;
+}
+
+.container
+{
+	max-width : var(--maxWidth);
+	padding   : 1em;
+	margin    : auto;
+}
+
+.brands
+{
+	display               : grid;
+	grid-template-columns : repeat(auto-fill, minmax(320px, 1fr));
+	gap                   : 2em;
+}
+
+.brands img
+{
+	max-width : 320px;
+}
+
+.team
+{
+	display               : grid;
+	gap                   : 2em;
+	grid-template-columns : minmax(250px, 1fr) 3fr;
+}
+
+.team img
+{
+	max-width : 100%;
+}
+
+.team h4
+{
+	margin-top : 0;
+}
+
+@media(max-width : 600px)
+{
+	.team
+	{
+		display : block;
+	}
+
+	.team img
+	{
+		max-width : 250px;
+	}
+}
